@@ -1,10 +1,10 @@
 <template>
   <div style="width: 800px;">
-    <div class="row mb-1">
-      <div class="col-sm-2">begin</div>
+    <div class="row mb-1" v-for="item in items" :key="item.id">
+      <div class="col-sm-2">{{ item.title }}</div>
       <div class="col-sm-10 pt-1">
         <div class="progress">
-          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="66" class="progress-bar bg-success" style="background-color: #DC143C; width:30%"  ><!---->
+          <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="66" class="progress-bar bg-success" v-bind:style=" {'background-color': item.color, 'width': item.size }"  ><!---->
           </div>
         </div>
       </div>

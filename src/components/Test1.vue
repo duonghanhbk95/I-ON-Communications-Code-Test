@@ -39,8 +39,8 @@ export default {
   data () {
     return {
       data: {
-        columns: [...jsonData.columns],
-        rows: [...jsonData.rows]
+        columns: [],
+        rows: []
       },
       selectRow: 0
     }
